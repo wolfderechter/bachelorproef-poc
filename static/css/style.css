@@ -219,3 +219,22 @@ nav.active .icon .line2 {
 }
 
 /* End of About me area */
+
+/* Filtering */
+filtering {
+  margin-bottom: 40px;
+}
+.filtering span {
+  border-bottom: 2px solid transparent;
+  color: #282b2d;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-right: 20px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.filtering span:last-child {
+  margin: 0;
+}

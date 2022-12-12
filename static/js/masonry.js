@@ -55,3 +55,16 @@ function shrinkImg() {
   popupImg.classList.remove("enlarged");
   popupImg.setAttribute("onclick", "enlargeImg()");
 }
+
+$(function () {
+  $(".grid").masonry({ itemSelector: ".grid-item" });
+
+  $(".filtering").on("click", "button", function () {
+    var a = $(".masonry").isotope({});
+    var e = $(this).attr("data-filter");
+    a.isotope({ filter: e });
+  });
+  $(".filtering").on("click", "button", function () {
+    $(this).addClass("active").siblings().removeClass("active");
+  });
+});
