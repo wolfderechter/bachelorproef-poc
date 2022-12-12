@@ -22,9 +22,9 @@
               <button type="button" class="filter" onclick="filterSelection('paintings')">Paintings</button>
             </div>
 
-            <!-- images -->
-            <div class="masonry">
-              {{ $data := getJSON "/content/portfolio/portfolio.json"}}
+            <!-- images with my custom masonry layout -->
+            <!--<div class="masonry">
+              {{ $data := getJSON "content/portfolio/portfolio.json"}}
               {{ range $data.portfolioList }}
               {{ $src := .src }}
               {{ $class := .class }}
@@ -32,7 +32,21 @@
                 <img src="{{ $src }}" height="{{ .Height }}" width="{{ .Width }}" alt="{{ $class }}" class="img-fluid">
               </div>
               {{ end }}
+            </div> -->
+
+            <!-- Images with bootstrap masonry -->
+            <div class="row masonry" data-masonry='{"percentPosition": true, "itemSelector": ".show" }'>
+              {{ $data := getJSON "content/portfolio/portfolio.json"}}
+              {{ range $data.portfolioList }}
+              {{ $src := .src }}
+              {{ $class := .class }}
+                <div class="col-6 col-md-4 col-xl-3 pb-3 px-2 grid-images {{ $class }}">
+                <!-- <div class="grid-images {{ $class }}"> -->
+                  <img src="{{ $src }}" height="{{ .Height }}" width="{{ .Width }}" alt="{{ $class }}" class="img-fluid">
+                </div>
+              {{ end }}
             </div>
+
             <!-- predefined popup that we will fill when an image is clicked -->
             <div id="popup">
               <img src="" alt="">
