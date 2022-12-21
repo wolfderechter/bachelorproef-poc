@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="{{ .Lang }}">
-<head>
- {{ partial "head" . }}
-</head>
-<body>
-  <header>
-    {{ partial "header" . }}
-  </header>
-  <main>
-    {{ block "main" . }}{{ end }}
-  </main>
-  <footer>
-    {{ partial "footer" . }}
-  </footer>
-  {{ partial "scriptFooter" . }}
-</body>
+  <head>
+    {{ partial "head" . }}
+  </head>
+  <body>
+    <div style="position: relative; min-height: 100vh">
+      <header>{{ partial "header" . }}</header>
+      <main style="padding-bottom: 80px">{{ block "main" . }}{{ end }}</main>
+      <footer class="footer">{{ partial "footer" . }}</footer>
+      {{ partial "scriptFooter" . }}
+    </div>
+  </body>
 </html>
