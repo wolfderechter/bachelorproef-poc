@@ -8,17 +8,24 @@
               <h1 class="title-h1">Portfolio</h1>
             </div>
 
-            <div class="button-group" id="myBtnContainer">
+            <!-- <div class="button-group" id="myBtnContainer">
               <button type="button" class="filter" onclick="filterSelection('all')">All</button>
               <button type="button" class="filter" onclick="filterSelection('character-art')">Character art</button>
               <button type="button" class="filter" onclick="filterSelection('studies')">Studies</button>
               <button type="button" class="filter" onclick="filterSelection('concept-art')">Concept art</button>
               <button type="button" class="filter" onclick="filterSelection('paintings')">Paintings</button>
-            </div>
+            </div> -->
+            <div class="filtering col-sm-12 button-group" id="myBtnContainer">
+              <button data-filter="*" class="active">All</span>
+              <button data-filter=".character-art" class="">Character Art</button>
+              <button data-filter=".studies" class="">Studies</button>
+              <button data-filter=".concept-art" class="">Concept Art</button>
+              <button data-filter=".paintings" class="">Paintings</span>
+          </div>
 
-            <!-- images -->
-            <div class="masonry">
-              {{ $data := getJSON "/content/portfolio/portfolio.json"}}
+            <!-- images with my custom masonry layout -->
+            <!--<div class="masonry">
+              {{ $data := getJSON "content/portfolio/portfolio.json"}}
               {{ range $data.portfolioList }}
               {{ $src := .src }}
               {{ $class := .class }}
@@ -26,7 +33,21 @@
                 <img src="{{ $src }}" height="{{ .Height }}" width="{{ .Width }}" alt="{{ $class }}" class="img-fluid">
               </div>
               {{ end }}
+            </div> -->
+
+            <!-- Images with bootstrap masonry -->
+            <div class="row masonry" data-masonry='{"percentPosition": true }'>
+              {{ $data := getJSON "content/portfolio/portfolio.json"}}
+              {{ range $data.portfolioList }}
+              {{ $src := .src }}
+              {{ $class := .class }}
+                <div class="col-6 col-md-4 pb-3 px-2 grid-images {{ $class }}">
+                <!-- <div class="grid-images {{ $class }}"> -->
+                  <img src="{{ $src }}" height="{{ .Height }}" width="{{ .Width }}" alt="{{ $class }}" class="img-fluid">
+                </div>
+              {{ end }}
             </div>
+
             <!-- predefined popup that we will fill when an image is clicked -->
             <div id="popup">
               <img src="" alt="">
