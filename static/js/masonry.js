@@ -3,34 +3,84 @@ const masonry = document.querySelector(".masonry");
 let popup = document.getElementById("popup");
 let popupImg = document.querySelector("#popup img");
 const selectedImage = document.getElementById("selectedImage");
-// const imageIndexes = [1,2,3,4,5,6,7,9,10,11,12,13,14,15,16,17,18,19,20,21,23,24];
-const masonryImages = document.querySelectorAll(".grid-images img");
+var masonryImages = [...$(".grid-images:visible")];
 const selectedIndex = null;
 
-masonryImages.forEach((image) => {
-  image.addEventListener("click", () => {
-    // init popup
+function prepareImgs() {
+  for (let index = 0; index < masonryImages.length; index++) {
+    masonryImages[index].addEventListener("click", () => {
+      imageImg = masonryImages[index].children[0];
 
-    // image.style.scale = '1.5'
-    // image.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+      popup.setAttribute("id", "popup");
+      popup.style.cssText = "visibility: visible;";
+      popup.style.opacity = "1";
 
-    popup.setAttribute("id", "popup");
-    popup.style.cssText = "visibility: visible;";
-    popup.style.opacity = "1";
-    // popup.style.transition = 'all 0.4s ease-in';
-    popup.style.transition = "all 0.4s ease-out";
-    popup.setAttribute("onclick", "closeImg()");
-    popup.setAttribute("onclick", "closeImgByClicking()");
-    window.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") {
-        closeImg();
+      popup.style.transition = "all 0.4s ease-out";
+      popup.setAttribute("onclick", "closeImgByClicking()");
+
+      function addWindowKeydownListener() {
+        window.addEventListener(
+          "keydown",
+          (e) => {
+            if (e.key === "Escape") {
+              closeImg();
+            } else if (e.key === "ArrowLeft") {
+              masonryImages[
+                (index - (1 % masonryImages.length) + masonryImages.length) %
+                  masonryImages.length
+              ].click();
+            } else if (e.key === "ArrowRight") {
+              masonryImages[(index + 1) % masonryImages.length].click();
+            } else {
+              addWindowKeydownListener();
+            }
+          },
+          { once: true }
+        );
       }
-    });
 
-    popupImg.setAttribute("src", image.src);
-    popupImg.setAttribute("onclick", "enlargeImg()");
-  });
-});
+      addWindowKeydownListener();
+
+      popupImg.setAttribute("src", imageImg.src);
+      popupImg.setAttribute("onclick", "enlargeImg()");
+    });
+  }
+}
+//   image.addEventListener("click", () => {
+//     // console.log(image.children[0]);
+//     imageImg = image.children[0];
+//     // init popup
+
+//     // image.style.scale = '1.5'
+//     // image.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+
+//     popup.setAttribute("id", "popup");
+//     popup.style.cssText = "visibility: visible;";
+//     popup.style.opacity = "1";
+//     // popup.style.transition = 'all 0.4s ease-in';
+//     popup.style.transition = "all 0.4s ease-out";
+//     popup.setAttribute("onclick", "closeImg()");
+//     popup.setAttribute("onclick", "closeImgByClicking()");
+//     window.addEventListener(
+//       "keydown",
+//       (e) => {
+//         if (e.key === "Escape") {
+//           closeImg();
+//         } else if (e.key === "ArrowLeft") {
+//           image.previousElementSibling.click();
+//           console.log(image.previousElementSibling);
+//         } else if (e.key === "ArrowRight") {
+//           console.log(image.nextElementSibling);
+//           image.nextElementSibling.click();
+//         }
+//       },
+//       { once: true }
+//     );
+
+//     popupImg.setAttribute("src", imageImg.src);
+//     popupImg.setAttribute("onclick", "enlargeImg()");
+//   });
+// });
 
 function closeImg() {
   popupElem = document.querySelector("#popup");
@@ -56,15 +106,27 @@ function shrinkImg() {
   popupImg.setAttribute("onclick", "enlargeImg()");
 }
 
-$(function () {
-  $(".grid").masonry({ itemSelector: ".grid-item" });
+// $(function () {
+// $(".grid").masonry({ itemSelector: ".grid-item" });
 
-  $(".filtering").on("click", "button", function () {
-    var a = $(".masonry").isotope({});
-    var e = $(this).attr("data-filter");
-    a.isotope({ filter: e });
-  });
-  $(".filtering").on("click", "button", function () {
-    $(this).addClass("active").siblings().removeClass("active");
-  });
+$(".filtering").on("click", "button", function () {
+  var a = $(".masonry").isotope({});
+  var e = $(this).attr("data-filter");
+  a.isotope({ filter: e });
+
+  // Delay until filtering is done
+  setTimeout(() => {
+    masonryImages = [...$(".grid-images:visible")];
+    prepareImgs();
+    // Clone the masonry to remove all eventlisteners present
+    var clone = document.querySelector(".masonry").cloneNode(true);
+  }, 500);
 });
+
+$(".filtering").on("click", "button", function () {
+  $(this).addClass("active").siblings().removeClass("active");
+});
+// });
+
+// $("#myBtnContainer").children[0].click();
+// console.log(document.querySelector("#myBtnContainer").children[0].click());
