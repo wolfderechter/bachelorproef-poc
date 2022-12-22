@@ -28,7 +28,9 @@ collections:
           - name: portfolioList
             label: Portfolio images
             widget: list
-            summary: "{{fields.src}}"
+            summary: "{{fields.src}} - {{fields.class}}"
+            label_singular: "Add New Work"
+            add_to_top: true
             fields:
               - {
                   label: "Type Art",
