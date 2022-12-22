@@ -2,6 +2,9 @@
     width: 25%;
     margin-bottom: 50px;
 } */
+body {
+    margin-top: 100px;
+}
 
 .e5ld4zj0 {
     display: flex;
@@ -14,4 +17,5 @@
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    margin-bottom: 150px;
 }
