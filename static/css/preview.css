@@ -1,4 +1,17 @@
-div img {
+/* div img {
     width: 25%;
     margin-bottom: 50px;
+} */
+
+.e5ld4zj0 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.e5ld4zj0 div img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
