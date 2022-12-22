@@ -9,18 +9,18 @@
           </div>
 
           <div class="filtering col-sm-12 button-group" id="myBtnContainer">
-            <button data-filter="*" class="active">All</span>
-              <button data-filter=".character-art" class="">Character Art</button>
-              <button data-filter=".studies" class="">Studies</button>
-              <button data-filter=".concept-art" class="">Concept Art</button>
-              <button data-filter=".paintings" class="">Paintings</span>
+            <button data-filter="*" class="active">All</span></button>
+            <button data-filter=".character-art" class="">Character Art</button>
+            <button data-filter=".studies" class="">Studies</button>
+            <button data-filter=".concept-art" class="">Concept Art</button>
+            <button data-filter=".paintings" class="">Paintings</span>
           </div>
 
           <!-- Images with bootstrap masonry -->
           <div class="row masonry" data-masonry='{"percentPosition": true }'>
             {{/* {{ $data := getJSON "content/portfolio/portfolio.json"}}
             {{ range $data.portfolioList }} */}}
-            {{ $data := $.Site.Data.portfolio}}
+            {{ $data := $.Site.Data.portfolio }}
             {{ range $data.portfolioList}}
 
             {{ $src := .src }}

@@ -29,7 +29,19 @@ collections:
             label: Portfolio images
             widget: list
             fields:
-              - { label: "Type Art", name: "class", widget: "string" }
+              - {
+                  label: "Type Art",
+                  name: "class",
+                  widget: "select",
+                  options:
+                    [
+                      "character-art",
+                      "studies",
+                      "concept-art",
+                      "paintings",
+                      "other",
+                    ],
+                }
               - { label: "Image", name: "src", widget: "image" }
   - name: "Website Settings"
     label: "Website Settings"
