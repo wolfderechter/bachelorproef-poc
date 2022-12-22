@@ -63,11 +63,11 @@ collections:
             add_to_top: true
             fields:
               - { label: "Image", name: "src", widget: "image" }
-      - file: "content/commissions.md"
+      - file: "content/commissions/index.md"
         label: "Page Content"
-        name: "about"
+        name: "Commissions text content"
         fields:
-          - { label: "Body", name: "body", widget: "text" } # The content of the markdown file
+          - { label: "Text Content", name: "body", widget: "text" } # The content of the markdown file
           # about me image
   - name: "Website Settings"
     label: "Website Settings"
