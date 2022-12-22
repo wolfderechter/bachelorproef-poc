@@ -1,7 +1,1 @@
 logo: /img/logo.webp
-# categories:
-#   [
-#     { lable: "Character Art", value: "character-art" },
-#     { label: "studies", value: "studies" },
-#   ]
-categories: ["character-art", "studies"]
