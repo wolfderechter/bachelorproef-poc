@@ -54,3 +54,4 @@ collections:
         file: "data/settings/general.yml"
         fields:
           - { label: "Logo", name: "logo", widget: "image" }
+          - { label: "Categories", name: "categories", widget: "select" }
