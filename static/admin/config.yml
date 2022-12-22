@@ -36,7 +36,7 @@ collections:
                   label: "Type Art",
                   name: "class",
                   widget: "select",
-                  options: { { .Site.Data.settings.general.categories } },
+                  options: "{{ .Site.Data.settings.general.categories }}",
                 }
               # options:
               #   [
