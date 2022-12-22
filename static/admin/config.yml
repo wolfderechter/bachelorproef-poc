@@ -22,7 +22,7 @@ collections:
     files:
       - name: "portfolioList"
         label: "Images"
-        file: "/content/portfolio/portfolio.json"
+        file: "/data/portfolio.json"
         fields:
           - name: portfolioList
             label: Portfolio images
@@ -30,3 +30,11 @@ collections:
             fields:
               - { label: "Type Art", name: "class", widget: "string" }
               - { label: "Image", name: "src", widget: "image" }
+  - name: "Website Settings"
+    label: "Website Settings"
+    files:
+      - name: general
+        label: Website Settings
+        file: "data/settings/general.yml"
+        fields:
+          - { label: "Logo", name: "src", widget: "image" }
