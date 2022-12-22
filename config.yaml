@@ -14,7 +14,6 @@ copyright: FriedFireAnt
 paginate: 5
 # controls the summary length on list pages
 summaryLength: 7
-logo_url: https://friedfireant.netlify.app/img/logo.webp
 # Allow html in markdown files
 markup:
   goldmark:

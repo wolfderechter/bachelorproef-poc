@@ -3,6 +3,7 @@ backend:
   branch: main
 media_folder: "static/img" # Folder where the users uploaded files should go
 public_folder: "/img" # the folder that shows up in the public url: url.com/img
+logo_url: https://friedfireant.netlify.app/img/logo.webp
 collections:
   - name: "pages"
     label: "Pages"
