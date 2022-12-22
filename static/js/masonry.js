@@ -14,7 +14,6 @@ function prepareImgs() {
       popup.setAttribute("id", "popup");
       popup.style.cssText = "visibility: visible;";
       popup.style.opacity = "1";
-
       popup.style.transition = "all 0.4s ease-out";
       popup.setAttribute("onclick", "closeImgByClicking()");
 
@@ -22,17 +21,20 @@ function prepareImgs() {
         window.addEventListener(
           "keydown",
           (e) => {
-            if (e.key === "Escape") {
-              closeImg();
-            } else if (e.key === "ArrowLeft") {
-              masonryImages[
-                (index - (1 % masonryImages.length) + masonryImages.length) %
+            // Only do something when popup is visible
+            if (popup.style.visibility === 'visible') {
+              if (e.key === "Escape") {
+                closeImg();
+              } else if (e.key === "ArrowLeft") {
+                masonryImages[
+                  (index - (1 % masonryImages.length) + masonryImages.length) %
                   masonryImages.length
-              ].click();
-            } else if (e.key === "ArrowRight") {
-              masonryImages[(index + 1) % masonryImages.length].click();
-            } else {
-              addWindowKeydownListener();
+                ].click();
+              } else if (e.key === "ArrowRight") {
+                masonryImages[(index + 1) % masonryImages.length].click();
+              } else {
+                addWindowKeydownListener();
+              }
             }
           },
           { once: true }
@@ -46,41 +48,6 @@ function prepareImgs() {
     });
   }
 }
-//   image.addEventListener("click", () => {
-//     // console.log(image.children[0]);
-//     imageImg = image.children[0];
-//     // init popup
-
-//     // image.style.scale = '1.5'
-//     // image.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-
-//     popup.setAttribute("id", "popup");
-//     popup.style.cssText = "visibility: visible;";
-//     popup.style.opacity = "1";
-//     // popup.style.transition = 'all 0.4s ease-in';
-//     popup.style.transition = "all 0.4s ease-out";
-//     popup.setAttribute("onclick", "closeImg()");
-//     popup.setAttribute("onclick", "closeImgByClicking()");
-//     window.addEventListener(
-//       "keydown",
-//       (e) => {
-//         if (e.key === "Escape") {
-//           closeImg();
-//         } else if (e.key === "ArrowLeft") {
-//           image.previousElementSibling.click();
-//           console.log(image.previousElementSibling);
-//         } else if (e.key === "ArrowRight") {
-//           console.log(image.nextElementSibling);
-//           image.nextElementSibling.click();
-//         }
-//       },
-//       { once: true }
-//     );
-
-//     popupImg.setAttribute("src", imageImg.src);
-//     popupImg.setAttribute("onclick", "enlargeImg()");
-//   });
-// });
 
 function closeImg() {
   popupElem = document.querySelector("#popup");
@@ -106,9 +73,6 @@ function shrinkImg() {
   popupImg.setAttribute("onclick", "enlargeImg()");
 }
 
-// $(function () {
-// $(".grid").masonry({ itemSelector: ".grid-item" });
-
 $(".filtering").on("click", "button", function () {
   var a = $(".masonry").isotope({});
   var e = $(this).attr("data-filter");
@@ -120,6 +84,8 @@ $(".filtering").on("click", "button", function () {
     prepareImgs();
     // Clone the masonry to remove all eventlisteners present
     var clone = document.querySelector(".masonry").cloneNode(true);
+    masonry = clone;
+
   }, 500);
 });
 
@@ -128,5 +94,5 @@ $(".filtering").on("click", "button", function () {
 });
 // });
 
-// $("#myBtnContainer").children[0].click();
-// console.log(document.querySelector("#myBtnContainer").children[0].click());
+// Click the 'all' filter'
+document.querySelector("#myBtnContainer").children[0].click();
