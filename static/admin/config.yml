@@ -29,7 +29,7 @@ collections:
             label: Portfolio images
             widget: list
             summary: "{{fields.src}} - {{fields.class}}"
-            label_singular: "Add New Work"
+            label_singular: "new work"
             add_to_top: true
             fields:
               - {
