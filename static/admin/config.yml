@@ -37,4 +37,4 @@ collections:
         label: Website Settings
         file: "data/settings/general.yml"
         fields:
-          - { label: "Logo", name: "src", widget: "image" }
+          - { label: "Logo", name: "logo", widget: "image" }
