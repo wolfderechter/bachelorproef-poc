@@ -1,5 +1,5 @@
 // Clicking on images creates a popup, clicking again enlarges them and clicking besides the img closes them
-const masonry = document.querySelector(".masonry");
+var masonry = document.querySelector(".masonry");
 let popup = document.getElementById("popup");
 let popupImg = document.querySelector("#popup img");
 const selectedImage = document.getElementById("selectedImage");

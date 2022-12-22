@@ -1,20 +1,20 @@
 backend:
   name: git-gateway
   branch: main
-media_folder: "static/img/" # Folder where the users uploaded files should go
-public_folder: "img" # the folder that shows up in the public url: url.com/img
+media_folder: "static/img" # Folder where the users uploaded files should go
+public_folder: "/img" # the folder that shows up in the public url: url.com/img
 collections:
   - name: "pages"
     label: "Pages"
-    files: 
+    files:
       - file: "content/about.md"
         label: "About"
         name: "about"
         fields:
-         - { label: "Title", name: "title", widget: "string" } # The title of the page
-         - { label: "Heading", name: "heading", widget: "text" } # The heading title of the about me page
-         - { label: "Body", name: "body", widget: "text" } # The content of the markdown file
-         # about me image
+          - { label: "Title", name: "title", widget: "string" } # The title of the page
+          - { label: "Heading", name: "heading", widget: "text" } # The heading title of the about me page
+          - { label: "Body", name: "body", widget: "text" } # The content of the markdown file
+          # about me image
   - name: "portfolio"
     label: "Portfolio"
     format: "json"
@@ -28,5 +28,5 @@ collections:
             label: Portfolio images
             widget: list
             fields:
-              - {label: "Type Art", name: "class", widget: "string"}
-              - {label: "Image", name: "src", widget: "image"}
+              - { label: "Type Art", name: "class", widget: "string" }
+              - { label: "Image", name: "src", widget: "image" }

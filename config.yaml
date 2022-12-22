@@ -1,15 +1,12 @@
 baseURL: http://localhost
 # Disable taxonomy pages (disables categories and tags folders)
 disableKinds:
-- taxonomy
-- taxonomyTerm
+  - taxonomy
+  - taxonomyTerm
 # for xml output
-languageCode: "en-au"
+languageCode: en
 # for website
-defaultContentLanguage: "en-au"
-languages:
-  en-au:
-    weight: 1
+defaultContentLanguage: en
 title: FriedFireAnt
 # alternate copyright company text
 copyright: FriedFireAnt
@@ -23,7 +20,6 @@ markup:
   goldmark:
     renderer:
       unsafe: true
-
 # menu links via config file
 # menu:
 #   main:
