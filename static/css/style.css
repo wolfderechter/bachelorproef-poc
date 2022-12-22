@@ -108,7 +108,7 @@ nav.active .icon .line2 {
   color: var(--primary-color);
 }
 
-.site-main .portfolio-area .button-group button + button {
+.site-main .portfolio-area .button-group button+button {
   padding-left: 3rem;
   padding-right: 3rem;
 }
@@ -162,7 +162,7 @@ nav.active .icon .line2 {
     font: normal 900 18px/50px var(--font);
   }
 
-  .site-main .portfolio-area .button-group button + button {
+  .site-main .portfolio-area .button-group button+button {
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -183,6 +183,7 @@ nav.active .icon .line2 {
   display: block;
   visibility: visible;
 }
+
 .masonry .grid-images {
   /* display: none; */
   /* visibility: hidden; */
@@ -202,6 +203,7 @@ nav.active .icon .line2 {
 .about-area .email {
   color: var(--primary-color);
   text-decoration: none;
+  margin-bottom: 1rem;
 }
 
 /* End of About me area */
@@ -210,6 +212,7 @@ nav.active .icon .line2 {
 filtering {
   margin-bottom: 40px;
 }
+
 .filtering span {
   border-bottom: 2px solid transparent;
   color: #282b2d;
@@ -221,6 +224,7 @@ filtering {
   display: inline-block;
   margin-bottom: 5px;
 }
+
 .filtering span:last-child {
   margin: 0;
 }

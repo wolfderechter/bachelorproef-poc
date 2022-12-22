@@ -81,3 +81,7 @@
   font: normal 900 16px/ 25px var(--font);
   /* max-width: 90%; */
 }
+
+.para-about p:last-child {
+  margin-bottom: 0;
+}
