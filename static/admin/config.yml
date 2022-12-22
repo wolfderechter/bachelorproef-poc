@@ -64,11 +64,9 @@ collections:
             fields:
               - { label: "Image", name: "src", widget: "image" }
       - file: "content/commissions.md"
-        label: "Commissions"
+        label: "Page Content"
         name: "about"
         fields:
-          - { label: "Title", name: "title", widget: "string" } # The title of the page
-          - { label: "Heading", name: "heading", widget: "text" } # The heading title of the about me page
           - { label: "Body", name: "body", widget: "text" } # The content of the markdown file
           # about me image
   - name: "Website Settings"
