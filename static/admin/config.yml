@@ -36,15 +36,16 @@ collections:
                   label: "Type Art",
                   name: "class",
                   widget: "select",
-                  options:
-                    [
-                      "character-art",
-                      "studies",
-                      "concept-art",
-                      "paintings",
-                      "other",
-                    ],
+                  options: { { .Site.Data.settings.general.categories } },
                 }
+              # options:
+              #   [
+              #     "character-art",
+              #     "studies",
+              #     "concept-art",
+              #     "paintings",
+              #     "other",
+              #   ],
               - { label: "Image", name: "src", widget: "image" }
   - name: "Website Settings"
     label: "Website Settings"
@@ -54,4 +55,4 @@ collections:
         file: "data/settings/general.yml"
         fields:
           - { label: "Logo", name: "logo", widget: "image" }
-          - { label: "Categories", name: "categories", widget: "select" }
+          - { label: "Categories", name: "categories", widget: "string" }
