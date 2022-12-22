@@ -1,0 +1,37 @@
+{{ define "main"}}
+<main class="site-main">
+    <section class="main">
+        <div class="container">
+            <section class="portfolio-area">
+                <div class="container">
+                    <div class="portfolio-title pb-5">
+                        <h1 class="title-h1">{{ .Title }}</h1>
+                        <p>{{ .Content }}</p>
+                    </div>
+
+                    <!-- Images with bootstrap masonry -->
+                    <div class="row masonry" data-masonry='{"percentPosition": true }'>
+                        {{ $data := $.Site.Data.commissionedwork }}
+                        {{ range $data.commissionsList}}
+                        {{ $src := .src }}
+                        <div class="col-6 col-md-4 pb-3 px-2 grid-images">
+                            <img src="{{ $src }}" height="{{ .Height }}" width="{{ .Width }}" alt="commission artwork"
+                                class="img-fluid">
+                        </div>
+                        {{ end }}
+                    </div>
+
+                    <!-- predefined popup that we will fill when an image is clicked -->
+                    <div id="popup">
+                        <img src="" alt="">
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </section>
+    <script src="/js/masonryCommissions.js"></script>
+
+</main>
+
+{{ end }}

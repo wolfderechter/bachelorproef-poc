@@ -70,27 +70,6 @@ function shrinkImg() {
   popupImg.classList.remove("enlarged");
   popupImg.setAttribute("onclick", "enlargeImg()");
 }
-
+prepareImgs();
 // JQuery
-$(".filtering").on("click", "button", function () {
-  var a = $(".masonry").isotope({});
-  var e = $(this).attr("data-filter");
-  a.isotope({ filter: e });
-
-  // Delay until filtering is done
-  setTimeout(() => {
-    masonryImages = [...$(".grid-images:visible")];
-    prepareImgs();
-    // Clone the masonry to remove all eventlisteners present
-    var clone = document.querySelector(".masonry").cloneNode(true);
-    masonry = clone;
-
-  }, 500);
-});
-
-$(".filtering").on("click", "button", function () {
-  $(this).addClass("active").siblings().removeClass("active");
-});
-
-// Click the 'all' filter'
-document.querySelector("#myBtnContainer")?.children[0].click();
+// $(".masonry").isotope({});

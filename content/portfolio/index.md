@@ -4,5 +4,5 @@ title: "Portfolio"
 # draft: false
 type: portfolio
 menu: main
-weight: 20
+weight: 1
 ---
