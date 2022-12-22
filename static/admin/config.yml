@@ -15,7 +15,6 @@ collections:
           - { label: "Title", name: "title", widget: "string" } # The title of the page
           - { label: "Heading", name: "heading", widget: "text" } # The heading title of the about me page
           - { label: "Body", name: "body", widget: "text" } # The content of the markdown file
-          # about me image
   - name: "portfolio"
     label: "Portfolio"
     format: "json"
@@ -48,11 +47,11 @@ collections:
               - { label: "Image", name: "src", widget: "image" }
   - name: "commissions"
     label: "Commissions"
-    format: "json"
-    extension: "json"
     files:
       - name: "commissionsList"
         label: "Images"
+        format: "json"
+        extension: "json"
         file: "/data/commissions.json"
         fields:
           - name: commissionsList
@@ -67,8 +66,7 @@ collections:
         label: "Page Content"
         name: "Commissions text content"
         fields:
-          - { label: "Text Content", name: "body", widget: "text" } # The content of the markdown file
-          # about me image
+          - { label: "Body", name: "body", widget: "text" } # The content of the markdown file
   - name: "Website Settings"
     label: "Website Settings"
     files:
