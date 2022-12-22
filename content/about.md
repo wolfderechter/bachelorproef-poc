@@ -4,6 +4,7 @@ menu: main
 type: about
 heading: Let me introduce myself
 weight: 3
+selfportrait: /img/me.webp
 ---
 Hi I'm an illustrator / concept artist. I am both capable of 2D and 3D drawings but my preference goes out to 2D.
 
