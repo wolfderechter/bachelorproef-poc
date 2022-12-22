@@ -12,3 +12,4 @@ I've been passionate about art and drawing since I was little. In 2021 I graduat
 
 
 for further inquiries feel free to reach out to me on my email - 
+{{< email >}}

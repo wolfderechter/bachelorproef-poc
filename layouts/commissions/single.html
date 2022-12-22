@@ -6,7 +6,7 @@
                 <div class="container">
                     <div class="portfolio-title pb-5">
                         <h1 class="title-h1">{{ .Title }}</h1>
-                        <p class="para">{{ .Content }}</p>
+                        <p class="para">{{ .Content | markdownify }}</p>
                     </div>
 
                     <!-- Images with bootstrap masonry -->
