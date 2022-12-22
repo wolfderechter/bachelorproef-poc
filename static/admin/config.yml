@@ -28,7 +28,7 @@ collections:
           - name: portfolioList
             label: Portfolio images
             widget: list
-            summary: "{{fields.image}}"
+            summary: "{{fields.src}}"
             fields:
               - {
                   label: "Type Art",
