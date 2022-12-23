@@ -49,7 +49,7 @@ collections:
   - name: "commissions"
     label: "Commissions"
     folder: "content/commissions"
-    fields:
+    files:
       - name: "commissionsList"
         label: "Images"
         format: "json"
