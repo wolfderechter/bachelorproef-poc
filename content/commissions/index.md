@@ -1,8 +1,8 @@
 ---
-title: "Commissions"
+title: Commissions
 menu: main
 weight: 2
 type: commissions
-commissionsopen: false
+commissionsopen: true
 ---
 f
