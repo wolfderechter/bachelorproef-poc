@@ -48,7 +48,8 @@ collections:
               - { label: "Image", name: "src", widget: "image" }
   - name: "commissions"
     label: "Commissions"
-    files:
+    folder: "content/commissions"
+    fields:
       - name: "commissionsList"
         label: "Images"
         format: "json"
