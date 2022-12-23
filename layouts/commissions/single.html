@@ -6,7 +6,15 @@
                 <div class="container">
                     <div class="portfolio-title pb-5">
                         <h1 class="title-h1">{{ .Title }}</h1>
-                        <p class="para">{{ .Content | markdownify }}</p>
+                        {{ if .Params.commissionsopen }}
+                            {{with .Site.GetPage "/commissions/commissionsopen.md"}}
+                                <p class="para">{{.Content | markdownify}}</p>
+                            {{end}}
+                        {{ else }}
+                            {{with .Site.GetPage "/commissions/commissionsopen.md"}}
+                            <p class="para">{{.Content | markdownify}}</p>
+                            {{end}}
+                        {{ end }}
                     </div>
 
                     <!-- Images with bootstrap masonry -->

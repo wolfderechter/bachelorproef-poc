@@ -65,9 +65,21 @@ collections:
               - { label: "Image", name: "src", widget: "image" }
       - file: "content/commissions/index.md"
         label: "Page Content"
-        name: "Commissions text content"
+        name: "commissions"
         fields:
-          - { label: "Body", name: "body", widget: "text" } # The content of the markdown file
+          - label: "Commissions Toggle"
+            name: "commissionsopen"
+            widget: boolean
+          - file: "content/commissions/commissionsopen.md"
+            label: "Commissions Open Text"
+            name: "commissionsopen"
+            widget: markdown
+          - file: "content/commissions/commissionsclosed.md"
+            label: "Commissions Closed Text"
+            name: "commissionsclosed"
+            widget: markdown
+              
+          # - { label: "Body", name: "body", widget: "text" } # The content of the markdown file
   - name: "Website Settings"
     label: "Website Settings"
     files:
