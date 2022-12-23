@@ -48,7 +48,6 @@ collections:
               - { label: "Image", name: "src", widget: "image" }
   - name: "commissions"
     label: "Commissions"
-    folder: "content/commissions"
     files:
       - name: "commissionsList"
         label: "Images"
@@ -64,22 +63,18 @@ collections:
             add_to_top: true
             fields:
               - { label: "Image", name: "src", widget: "image" }
-      - label: "Page Content"
-        name: "commissions"
-        folder: "content/commissions/"
-        fields:
-          - file: "content/commissions/index.md"
-            label: "Commissions Open?"
-            name: "commissionsopen"
-            widget: boolean
-          - file: "content/commissions/commissionsopen.md"
-            label: "Commissions Open Text"
-            name: "body"
-            widget: markdown
-          - file: "content/commissions/commissionsclosed.md"
-            label: "Commissions Closed Text"
-            name: "body2"
-            widget: markdown
+      - file: "content/commissions/index.md"
+        label: "Commissions Open?"
+        name: "commissionsopen"
+        widget: boolean
+      - file: "content/commissions/commissionsopen.md"
+        label: "Commissions Open Text"
+        name: "body"
+        widget: markdown
+      - file: "content/commissions/commissionsclosed.md"
+        label: "Commissions Closed Text"
+        name: "body2"
+        widget: markdown
       # - file: "content/commissions/index.md"
       #   label: "Page Content"
       #   name: "commissions"
