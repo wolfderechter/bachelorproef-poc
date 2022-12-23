@@ -76,7 +76,7 @@ collections:
             widget: markdown
           - file: "content/commissions/commissionsclosed.md"
             label: "Commissions Closed Text"
-            name: "body"
+            name: "body2"
             widget: markdown
               
           # - { label: "Body", name: "body", widget: "text" } # The content of the markdown file
