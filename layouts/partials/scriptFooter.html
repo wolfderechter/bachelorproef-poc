@@ -13,10 +13,10 @@
     integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
     async></script>
 
-{{ range .Site.Data.settings.general.styling }}
+{{ range $key, $value := .Site.Data.settings.general.styling }}
 <script>
     /* Inject css variables */
     var r = document.querySelector(':root');
-    r.style.setProperty('--{{ .name }}', "{{ .value }}");
+    r.style.setProperty('--{{ $key }}', "{{ $value }}");
 </script>
 {{ end }}
