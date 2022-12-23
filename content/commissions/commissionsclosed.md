@@ -1,1 +1,1 @@
-closed
+Commissions are currently closed.

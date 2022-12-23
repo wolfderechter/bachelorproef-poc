@@ -1,1 +1,1 @@
-openn
+Commissions are currently open.
