@@ -78,4 +78,4 @@ collections:
           - { label: "Logo", name: "logo", widget: "image" }
           - label: "Styling"
             name: "styling"
-            widget: "list"
+            widget: "map"
