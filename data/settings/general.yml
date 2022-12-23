@@ -1,1 +1,13 @@
 logo: /img/logo.webp
+styling:
+  - name: primarycolor
+    value: "#c4437d"
+  - name: titlecolor
+    value: "#141313"
+  - name: textcolor
+    value: "#777777"
+  - name: font
+    value: "menlotus"
+# primarycolor: "#c4437d"
+# --title-color: #141313;
+# --text-color: #777777;

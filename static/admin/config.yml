@@ -5,12 +5,12 @@ media_folder: "static/img" # Folder where the users uploaded files should go
 public_folder: "/img" # the folder that shows up in the public url: url.com/img
 logo_url: https://friedfireant.netlify.app/img/logo.webp
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: "About"
+    label: "About"
     files:
       - file: "content/about.md"
-        label: "About"
-        name: "about"
+        label: "Page Content"
+        name: "Page Content"
         fields:
           - { label: "Title", name: "title", widget: "string" } # The title of the page
           - { label: "Heading", name: "heading", widget: "text" } # The heading title of the about me page
@@ -76,3 +76,6 @@ collections:
         file: "data/settings/general.yml"
         fields:
           - { label: "Logo", name: "logo", widget: "image" }
+          - label: "Styling"
+            name: "styling"
+            widget: "list"

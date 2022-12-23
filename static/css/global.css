@@ -6,7 +6,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  color: var(--text-color);
+  color: var(--textcolor);
   margin-top: 20px;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .footer div div {
-  color: var(--text-color);
+  color: var(--textcolor);
 }
 
 /* Global classes */
@@ -77,7 +77,7 @@
 }
 
 .para {
-  color: var(--text-color);
+  color: var(--textcolor);
   font: normal 900 16px/ 25px var(--font);
   /* max-width: 90%; */
 }
