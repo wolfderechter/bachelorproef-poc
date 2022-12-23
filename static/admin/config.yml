@@ -80,6 +80,11 @@ collections:
             name: "styling"
             widget: "object"
             fields:
-              - { label: "Primary Color", name: "primarycolor", widget: "color" }
-              - { label: "Title Color", name: "titlecolor", widget: "color" }
-              - { label: "Text Color", name: "textcolor", widget: "color" }
+              - { label: "Primary Color", name: "primarycolor", default: "#c4437d", widget: "color" }
+              - { label: "Title Color", name: "titlecolor", default: "#141313", widget: "color" }
+              - { label: "Text Color", name: "textcolor", default: "#777777", widget: "color" }
+              - widget: "select" 
+                label: "Font"
+                name: "font"
+                default: ["menlotus"]
+                options: ["menlotus", "alone-on-earth", "traho"]
