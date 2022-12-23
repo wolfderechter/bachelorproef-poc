@@ -64,17 +64,21 @@ collections:
             fields:
               - { label: "Image", name: "src", widget: "image" }
       - file: "content/commissions/index.md"
-        label: "Commissions Open?"
-        name: "commissionsopen"
-        widget: boolean
+        name: "togglecommissions"
+        label: "Toggle Commissions"
+        fields:
+          - {label: "Commissions Open?", name: "commissionsopen", widget: boolean}
       - file: "content/commissions/commissionsopen.md"
+        name: "commissionsopentext"
         label: "Commissions Open Text"
-        name: "body"
-        widget: markdown
+        fields: 
+          - {label: "Commissions Open Text", name: "body", widget: markdown}
       - file: "content/commissions/commissionsclosed.md"
+        name: "commissionsclosedtext"
         label: "Commissions Closed Text"
-        name: "body2"
-        widget: markdown
+        fields: 
+         - {label: "Commissions Closed Text", name: "body", widget: markdown}
+
       # - file: "content/commissions/index.md"
       #   label: "Page Content"
       #   name: "commissions"
