@@ -79,3 +79,7 @@ collections:
           - label: "Styling"
             name: "styling"
             widget: "object"
+            fields:
+              - { label: "Primary Color", name: "primarycolor", widget: "color" }
+              - { label: "Title Color", name: "titlecolor", widget: "color" }
+              - { label: "Text Color", name: "textcolor", widget: "color" }
