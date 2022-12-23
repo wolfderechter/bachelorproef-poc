@@ -72,11 +72,11 @@ collections:
             widget: boolean
           - file: "content/commissions/commissionsopen.md"
             label: "Commissions Open Text"
-            name: "commissionsopen"
+            name: "commissionsopenmd"
             widget: markdown
           - file: "content/commissions/commissionsclosed.md"
             label: "Commissions Closed Text"
-            name: "commissionsclosed"
+            name: "commissionsclosedmd"
             widget: markdown
               
           # - { label: "Body", name: "body", widget: "text" } # The content of the markdown file
