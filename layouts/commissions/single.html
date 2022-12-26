@@ -8,11 +8,11 @@
                         <h1 class="title-h1">{{ .Title }}</h1>
                         {{ if .Params.commissionsopen }}
                             {{ with .Resources.GetMatch "commissionsopen.md" }}
-                                <p class="para">{{.Content | markdownify}}</p>
+                                <div class="para">{{.Content | markdownify}}</div>
                             {{end}}
                         {{ else }}
                             {{ with .Resources.GetMatch "commissionsclosed.md" }}
-                                <p class="para">{{.Content | markdownify}}</p>
+                                <div class="para">{{.Content | markdownify}}</div>
                             {{end}}
                         {{ end }}
                     </div>

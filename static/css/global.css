@@ -10,10 +10,6 @@
   margin-top: 20px;
 }
 
-.page-container {
-  background-color: aqua;
-}
-
 .footer div div {
   color: var(--textcolor);
 }
@@ -74,6 +70,7 @@
 
 .title-h1 {
   font: normal bold 43px/ 40px var(--font);
+  color: var(--titlecolor);
 }
 
 .para {

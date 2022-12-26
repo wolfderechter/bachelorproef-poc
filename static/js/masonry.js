@@ -92,7 +92,7 @@ $(".filtering").on("click", "button", function () {
   $(this).addClass("active").siblings().removeClass("active");
 });
 
-window.onload(() => {
+window.addEventListener('load', () => {
   document.querySelector("#myBtnContainer")?.children[0].click();
 })
 // Click the 'all' filter'

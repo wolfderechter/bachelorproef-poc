@@ -31,21 +31,11 @@
   background-clip: text;
 }
 
-/* .navbar .navbar-toggler.collapsed #collapse {
-    visibility: hidden;
+#navToggler, #navToggler:focus{
+  outline: none;
+  box-shadow: none;
+  border-color: none;
 }
-
-.navbar .navbar-toggler #collapse {
-    visibility: visible;
-}
-
-.navbar .navbar-toggler.collapsed #expand {
-    visibility: visible;
-}
-
-.navbar .navbar-toggler #expand {
-    visibility: hidden;
-} */
 
 .icon {
   background-color: #fff;
@@ -80,14 +70,13 @@
 
 nav.active .icon .line1 {
   transform: rotate(-405deg) translateY(5.5px);
+  left: 0px;
 }
 
 nav.active .icon .line2 {
   transform: rotate(405deg) translateY(-5.5px);
-}
-
-.navbar-toggler:focus {
-  box-shadow: 0 0 0 0;
+  left: 0px;
+  top: 17px;
 }
 
 /* end nav */

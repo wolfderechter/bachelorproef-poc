@@ -71,6 +71,6 @@ function shrinkImg() {
   popupImg.setAttribute("onclick", "enlargeImg()");
 }
 
-window.onload(() => {
+window.addEventListener('load', () => {  
   prepareImgs();
 })
