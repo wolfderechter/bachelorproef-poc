@@ -70,6 +70,7 @@ function shrinkImg() {
   popupImg.classList.remove("enlarged");
   popupImg.setAttribute("onclick", "enlargeImg()");
 }
-prepareImgs();
-// JQuery
-// $(".masonry").isotope({});
+
+window.onload(() => {
+  prepareImgs();
+})
