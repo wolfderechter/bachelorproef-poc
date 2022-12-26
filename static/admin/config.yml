@@ -67,7 +67,7 @@ collections:
         name: "togglecommissions"
         label: "Toggle Commissions"
         fields:
-          - {label: "Commissions Open?", name: "commissionsopen", widget: boolean}
+          - {label: "Commissions Open?", name: "commissionsopen", hint: "Blue toggle means that the commissions are open", widget: boolean}
       - file: "content/commissions/commissionsopen.md"
         name: "commissionsopentext"
         label: "Commissions Open Text"
@@ -108,9 +108,9 @@ collections:
             name: "styling"
             widget: "object"
             fields:
-              - { label: "Primary Color", name: "primarycolor", default: "#c4437d", widget: "color" }
-              - { label: "Title Color", name: "titlecolor", default: "#141313", widget: "color" }
-              - { label: "Text Color", name: "textcolor", default: "#777777", widget: "color" }
+              - { label: "Primary Color", name: "primarycolor", hint: "#c4437d", widget: "color" }
+              - { label: "Title Color", name: "titlecolor", hint: "#141313", widget: "color" }
+              - { label: "Text Color", name: "textcolor", hint: "#777777", widget: "color" }
               - widget: "select" 
                 label: "Font"
                 name: "font"
