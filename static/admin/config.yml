@@ -33,17 +33,29 @@ collections:
             add_to_top: true
             fields:
               - {
-                  label: "Type Art",
-                  name: "class",
-                  widget: "select",
-                  options:
-                    [
-                      "character-art",
-                      "studies",
-                      "concept-art",
-                      "paintings",
-                      "other",
-                    ],
+                  name: 'class',
+                  label: 'Type Art',
+                  widget: 'create-select',
+                  url: 'http://localhost:1313/portfolio/',
+                  query: "#myBtnContainer > button",
+                  # query: "#myBtnContainer > button:not(:first-child)",
+                  mode: 'html',
+                  multiple: false,
+                  min: 1,
+                  attribute: 'data-tag',
+                  hint: "New categories should be created with '-' instead of spaces"
+                  # label: "Type Art",
+                  # name: "class",
+                  # widget: "select",
+                  # options: 'data/test.yml'
+                  # options:
+                  #   [
+                  #     "character-art",
+                  #     "studies",
+                  #     "concept-art",
+                  #     "paintings",
+                  #     "other",
+                  #   ],
                 }
               - { label: "Image", name: "src", widget: "image" }
   - name: "commissions"

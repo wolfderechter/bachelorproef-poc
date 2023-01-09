@@ -10,10 +10,28 @@
 
           <div class="filtering col-sm-12 button-group" id="myBtnContainer">
             <button data-filter="*" class="active">All</span></button>
-            <button data-filter=".character-art" class="">Character Art</button>
+            <!-- Create a slice of all the categories used -->
+            {{ $categories := slice }}
+            {{ range .Site.Data.portfolio.portfolioList}}
+              {{ $categories = $categories | append .class }}
+            {{ end }}
+
+            <!-- Range only the unique values of the categories slice and create filter buttons  -->
+            {{ range $categories | uniq}}
+              <button data-filter=".{{ .}}" data-tag="{{.}}" class="">{{humanize .}}</button>
+            {{ end }}
+
+              <!-- <button data-filter=".{{ .}}" data-tag="{{.}}" class="">{{humanize .}}</button> -->
+
+            <!-- {{ $data := $.Site.Data.test }}
+            {{ range $data.class}}
+              <button data-filter=".{{ .}}" data-tag="{{.}}" class="">{{humanize .}}</button>
+
+            {{ end }} -->
+            <!-- <button data-filter=".character art" class="">Character Art</button>
             <button data-filter=".studies" class="">Studies</button>
             <button data-filter=".concept-art" class="">Concept Art</button>
-            <button data-filter=".paintings" class="">Paintings</span>
+            <button data-filter=".paintings" class="">Paintings</span> -->
           </div>
 
           <!-- Images with bootstrap masonry -->
