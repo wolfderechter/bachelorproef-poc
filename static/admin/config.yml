@@ -36,7 +36,7 @@ collections:
                   name: 'class',
                   label: 'Type Art',
                   widget: 'create-select',
-                  url: 'http://localhost:1313/portfolio/',
+                  url: 'https://friedfireant.netlify.app/portfolio/',
                   query: "#myBtnContainer > button",
                   # query: "#myBtnContainer > button:not(:first-child)",
                   mode: 'html',
