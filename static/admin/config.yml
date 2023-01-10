@@ -107,6 +107,6 @@ collections:
             name: "styling"
             widget: "object"
             fields:
-              - { label: "Primary Color", name: "primarycolor", hint: "Default value is #c4437d\nThis color is primarily used for navbar items and the filters", widget: "color" }
-              - { label: "Title Color", name: "titlecolor", hint: "Default value is #333333\nThis color is for the page titles", widget: "color" }
-              - { label: "Text Color", name: "textcolor", hint: "Default value is #777777\nThis color is for text on pages", widget: "color" }
+              - { label: "Primary Color", name: "primarycolor", hint: "This color is primarily used for navbar items and the filters, the default value is #c4437d", widget: "color" }
+              - { label: "Title Color", name: "titlecolor", hint: "This color is for the page titles, the default value is #333333", widget: "color" }
+              - { label: "Text Color", name: "textcolor", hint: "This color is for text on pages, the default value is #777777", widget: "color" }
