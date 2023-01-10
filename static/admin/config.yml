@@ -38,24 +38,11 @@ collections:
                   widget: 'create-select',
                   url: 'https://friedfireant.netlify.app/portfolio/',
                   query: "#myBtnContainer > button",
-                  # query: "#myBtnContainer > button:not(:first-child)",
                   mode: 'html',
                   multiple: false,
                   min: 1,
                   attribute: 'data-tag',
                   hint: "New categories should be created with '-' instead of spaces"
-                  # label: "Type Art",
-                  # name: "class",
-                  # widget: "select",
-                  # options: 'data/test.yml'
-                  # options:
-                  #   [
-                  #     "character-art",
-                  #     "studies",
-                  #     "concept-art",
-                  #     "paintings",
-                  #     "other",
-                  #   ],
                 }
               - { label: "Image", name: "src", widget: "image" }
   - name: "commissions"
@@ -127,4 +114,4 @@ collections:
                 label: "Font"
                 name: "font"
                 default: ["menlotus"]
-                options: ["menlotus", ]
+                options: ["menlotus", inter]
