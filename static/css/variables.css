@@ -12,5 +12,5 @@ body {
   --gradient-color: linear-gradient(90deg, #c4437d 0%, #d44166 100%);
   /* --shadow-color: 0px 10px 30px rgba(118, 85, 225, 0.3); */
   --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
-  /* --font: menlotus; */
-}
+  --font: menlotus;
+} 

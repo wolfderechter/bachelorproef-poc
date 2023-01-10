@@ -110,8 +110,3 @@ collections:
               - { label: "Primary Color", name: "primarycolor", hint: "Default value is #c4437d\nThis color is primarily used for navbar items and the filters", widget: "color" }
               - { label: "Title Color", name: "titlecolor", hint: "Default value is #333333\nThis color is for the page titles", widget: "color" }
               - { label: "Text Color", name: "textcolor", hint: "Default value is #777777\nThis color is for text on pages", widget: "color" }
-              - widget: "select" 
-                label: "Font"
-                name: "font"
-                default: ["menlotus"]
-                options: ["menlotus", inter]
