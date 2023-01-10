@@ -18,20 +18,8 @@
 
             <!-- Range only the unique values of the categories slice and create filter buttons  -->
             {{ range $categories | uniq}}
-              <button data-filter=".{{ .}}" data-tag="{{.}}" class="">{{humanize .}}</button>
+              <button data-filter=".{{ .}}" data-tag="{{.}}">{{humanize .}}</button>
             {{ end }}
-
-              <!-- <button data-filter=".{{ .}}" data-tag="{{.}}" class="">{{humanize .}}</button> -->
-
-            <!-- {{ $data := $.Site.Data.test }}
-            {{ range $data.class}}
-              <button data-filter=".{{ .}}" data-tag="{{.}}" class="">{{humanize .}}</button>
-
-            {{ end }} -->
-            <!-- <button data-filter=".character art" class="">Character Art</button>
-            <button data-filter=".studies" class="">Studies</button>
-            <button data-filter=".concept-art" class="">Concept Art</button>
-            <button data-filter=".paintings" class="">Paintings</span> -->
           </div>
 
           <!-- Images with bootstrap masonry -->
