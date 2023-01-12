@@ -77,24 +77,7 @@ collections:
         label: "Commissions Closed Text"
         fields: 
          - {label: "Commissions Closed Text", name: "body", widget: markdown}
-
-      # - file: "content/commissions/index.md"
-      #   label: "Page Content"
-      #   name: "commissions"
-      #   fields:
-      #     - label: "Commissions Open?"
-      #       name: "commissionsopen"
-      #       widget: boolean
-      #     - file: "content/commissions/commissionsopen.md"
-      #       label: "Commissions Open Text"
-      #       name: "body"
-      #       widget: markdown
-      #     - file: "content/commissions/commissionsclosed.md"
-      #       label: "Commissions Closed Text"
-      #       name: "body2"
-      #       widget: markdown
-              
-          # - { label: "Body", name: "body", widget: "text" } # The content of the markdown file
+         
   - name: "Website Settings"
     label: "Website Settings"
     files:

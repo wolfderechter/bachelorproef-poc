@@ -49,7 +49,6 @@ function prepareImgs() {
 
 function closeImg() {
   popupElem = document.querySelector("#popup");
-  // popupElem.style.transform = 'translateY(-200%)';
   popupElem.style.opacity = "0";
   popupElem.style.visibility = "hidden";
   popupElem.style.transition = "all 0.4s ease-out";
@@ -95,4 +94,3 @@ $(".filtering").on("click", "button", function () {
 window.addEventListener('load', () => {
   document.querySelector("#myBtnContainer")?.children[0].click();
 })
-// Click the 'all' filter'
