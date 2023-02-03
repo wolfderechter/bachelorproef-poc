@@ -1,10 +1,6 @@
 {
   "portfolioList": [
     {
-      "class": "studies",
-      "src": "/img/the-water-lily-pond.jpg"
-    },
-    {
       "src": "/img/1.webp",
       "class": "character-art"
     },
