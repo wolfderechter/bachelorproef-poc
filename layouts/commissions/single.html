@@ -7,13 +7,13 @@
                     <div class="portfolio-title pb-5">
                         <h1 class="title-h1">{{ .Title }}</h1>
                         {{ if .Params.commissionsopen }}
-                            {{ with .Resources.GetMatch "commissionsopen.md" }}
-                                <div class="para">{{.Content | markdownify}}</div>
-                            {{end}}
+                        {{ with .Resources.GetMatch "commissionsopen.md" }}
+                        <div class="para">{{.Content | markdownify}}</div>
+                        {{end}}
                         {{ else }}
-                            {{ with .Resources.GetMatch "commissionsclosed.md" }}
-                                <div class="para">{{.Content | markdownify}}</div>
-                            {{end}}
+                        {{ with .Resources.GetMatch "commissionsclosed.md" }}
+                        <div class="para">{{.Content | markdownify}}</div>
+                        {{end}}
                         {{ end }}
                     </div>
 
@@ -38,7 +38,7 @@
             </section>
         </div>
     </section>
-    <script src="/js/masonryCommissions.js"></script>
+    <script src="/js/masonryCommissions.js" defer></script>
 
 </main>
 

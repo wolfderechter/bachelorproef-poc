@@ -13,12 +13,12 @@
             <!-- Create a slice of all the categories used -->
             {{ $categories := slice }}
             {{ range .Site.Data.portfolio.portfolioList}}
-              {{ $categories = $categories | append .class }}
+            {{ $categories = $categories | append .class }}
             {{ end }}
 
             <!-- Range only the unique values of the categories slice and create filter buttons  -->
             {{ range $categories | uniq}}
-              <button data-filter=".{{ .}}" data-tag="{{.}}">{{humanize .}}</button>
+            <button data-filter=".{{ .}}" data-tag="{{.}}">{{humanize .}}</button>
             {{ end }}
           </div>
 
@@ -45,6 +45,6 @@
       </section>
     </div>
   </section>
-  <script src="/js/masonry.js"></script>
+  <script src="/js/masonry.js" defer></script>
 </main>
 {{ end }}
